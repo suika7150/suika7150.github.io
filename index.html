@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>阿緯的個人網站</title>
+  <meta charset="UTF-8" />
+  <title>阿緯 | Backend Engineer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .skills span {
+      display: inline-block;
+      background: #e3e8f0;
+      padding: 6px 12px;
+      margin: 4px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <h1>嗨，我是阿緯 👋</h1>
-  <p>這是我第一個 GitHub Pages 網站</p>
+
+  <div class="container">
+
+    <!-- About -->
+    <section>
+      <h1>阿緯</h1>
+      <p>
+        專注於後端開發的工程師，主要使用 Java / Spring Boot，
+        目前持續學習前後端分離架構與 Vue。
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>RESTful API</span>
+        <span>JPA / Hibernate</span>
+        <span>SQL</span>
+        <span>Vue 3</span>
+        <span>Git</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>使用者管理系統（Spring Boot）</strong><br />
+          實作 CRUD、分層架構（Controller / Service / Repository），
+          並使用 H2 / MySQL 進行資料存取。
+        </li>
+        <li>
+          <strong>前後端分離登入系統</strong><br />
+          使用 Spring Boot 提供 API，前端以 Vue 撰寫，
+          並透過 Axios 進行資料串接。
+        </li>
+      </ul>
+    </section>
+
+    <!-- Learning -->
+    <section>
+      <h2>Learning & Experience</h2>
+      <ul>
+        <li>Spring Boot 核心觀念：DI / IoC / MVC</li>
+        <li>API 測試：Postman</li>
+        <li>基本系統測試與報表產出（QA 經驗）</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Contact</h2>
+      <p>
+        GitHub：
+        <a href="https://github.com/suika7150" target="_blank">
+          https://github.com/suika7150
+        </a>
+      </p>
+    </section>
+
+  </div>
+
 </body>
 </html>

@@ -1,124 +1,436 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <title>葉權緯 | Backend Engineer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lucas | Backend Engineer</title>
+  </head>
+
+  <nav class="sidebar">
+    <a href="#status">STATUS</a>
+    <a href="#skills">SKILL</a>
+    <a href="#stages">STAGE</a>
+    <a href="#learning">EXP</a>
+    <a href="#contact">MSG</a>
+  </nav>
+
+  <body>
+    <div class="container">
+      <!-- ❤️ 角色狀態 -->
+      <section id="status">
+        <div class="profile-header">
+          <div class="avatar">
+            <img src="cat.jpg" alt="Lucas" />
+          </div>
+          <div class="status-container">
+            <h1>🧙‍♂️ Lucas</h1>
+            <p>職業：Backend Engineer</p>
+            <p>等級：Lv. 1</p>
+
+            <div class="status">
+              <div class="hp">❤️ HP：Java / Spring Boot</div>
+              <div class="mp">🔵 MP：JavaScript / Vue</div>
+              <div class="atk">⚔️ ATK：JPA / JDBC / MyBatis</div>
+              <div class="def">🛡️ DEF：MySQL</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🌳 技能樹 -->
+      <section id="skills">
+        <h2>🌳 Skill Tree</h2>
+
+        <div class="skill-tree">
+          <div class="backend">
+            <!-- Java -->
+            <div class="skill java" data-desc="Java 核心語法 / OOP">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
+              />
+              <span>Java</span>
+            </div>
+
+            <div class="link"></div>
+            <div class="link"></div>
+
+            <!-- Spring Boot -->
+            <div
+              class="skill spring"
+              data-desc="DI / IoC / MVC / JPA / JDBC / MyBatis"
+            >
+              <img
+                src="https://www.clipartmax.com/png/middle/241-2411261_categories-spring-tool-suite-icon.png"
+              />
+              <span>Spring Boot</span>
+            </div>
+
+            <div class="link"></div>
+            <div class="link"></div>
+
+            <!-- MySQL -->
+            <div class="skill mysql" data-desc="MySQL 資料庫 / SQL CRUD">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png"
+              />
+              <span>MySQL</span>
+            </div>
+
+            <!-- Python -->
+            <div class="skill python locked" data-desc="Pyhon">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"
+              />
+              <span>Python</span>
+            </div>
+          </div>
+
+          <div class="frontend">
+            <!-- Vue 3 -->
+            <div class="skill vue" data-desc="Router / Axios / Pinia">
+              <img src="https://img.icons8.com/color/96/vue-js.png" />
+              <span>Vue 3</span>
+            </div>
+
+            <div class="link"></div>
+            <div class="link"></div>
+
+            <!-- Angular 從 Vue 延伸 -->
+            <div class="skill locked" data-desc="Angular / TypeScript">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/919/919835.png"
+              />
+              <span>Angular</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🗺️ 關卡列表 -->
+      <section id="stages">
+        <h2>🗺️ Stages Cleared</h2>
+
+        <div class="stage">
+          <h3>Stage 1：Java 程式設計</h3>
+          <p>✔ Java核心語法</p>
+          <p>✔ OOP</p>
+          <p>🎁 獎勵：Java 熟練度 +1</p>
+        </div>
+
+        <div class="stage">
+          <h3>Stage 2：Java Web程式開發</h3>
+          <p>✔ JavaScript</p>
+          <p>✔ Servlet / JSP / MVC</p>
+          <p>🎁 獎勵：JavaScript 熟練度 +1</p>
+        </div>
+
+        <div class="stage">
+          <h3>Stage 3：Java 企業框架實務班</h3>
+          <p>✔ Spring Boot / Spring MVC / JPA / JDBC / MyBatis</p>
+          <p>✔ DI / IOC / AOP</p>
+          <p>✔ Spring MVC / JPA / JDBC / MyBatis</p>
+          <p>🎁 獎勵：Spring Boot 熟練度 +1</p>
+        </div>
+
+        <div class="stage">
+          <h3>Stage 4：Java企業培訓班</h3>
+          <p>✔ Vue3 / 前後端分離</p>
+          <p>🎁 獎勵：Vue 熟練度 +1</p>
+        </div>
+      </section>
+
+      <!-- 📚 Learning -->
+      <section id="learning">
+        <h2>Learning & Experience</h2>
+        <ul>
+          <li>Spring Boot：DI / IoC / MVC</li>
+          <li>API 測試：Postman</li>
+          <li>基本系統測試與 QA 經驗</li>
+        </ul>
+      </section>
+
+      <!-- 📬 Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          GitHub：
+          <a href="https://github.com/suika7150" target="_blank">
+            https://github.com/suika7150
+          </a>
+        </p>
+      </section>
+    </div>
+  </body>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
+    @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+    /* 讓網頁捲動變得平滑 */
+    html {
+      scroll-behavior: smooth;
     }
+
+    /* 側邊欄樣式 */
+    .sidebar {
+      position: fixed;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 100;
+    }
+
+    .sidebar a {
+      background: #2b2b2b;
+      border: 3px solid #555;
+      color: #ffd700;
+      padding: 10px;
+      font-size: 10px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 4px 4px 0 #000;
+      transition: all 0.2s;
+      width: 60px;
+    }
+
+    /* 滑鼠懸停效果 */
+    .sidebar a:hover {
+      background: #ffd700;
+      color: #000;
+      border-color: #fff;
+      transform: translateX(5px); /* 點擊感 */
+    }
+
+    /* 響應式：手機版隱藏或調整位置 */
+    @media (max-width: 1100px) {
+      .sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 20px;
+      }
+    }
+
+    body {
+      font-family: "Press Start 2P", monospace;
+      background: #1b1b1b;
+      color: #f8f8f8;
+      margin: 0;
+    }
+
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 30px 16px;
     }
-    h1, h2 {
+
+    section {
+      background: #2b2b2b;
+      border: 4px solid #555;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 6px 6px 0 #000;
+    }
+
+    h1,
+    h2 {
+      color: #ffd700;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    p,
+    li {
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    a {
+      color: #4ade80;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== 角色狀態 ===== */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 100px;
+    }
+
+    .avatar {
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+      width: 150px;
+      height: 150px;
+      margin-left: 70px;
+      border-radius: 50%;
+      border: 4px solid #ffd700;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      background: #111;
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .status-container {
+      margin-left: 0;
+      flex-grow: 1;
+      /* margin-left: 500px; */
+    }
+
+    .status div {
+      border: 2px solid #ffd700;
+      padding: 6px;
+      width: 300px;
+      margin-top: 6px;
+      font-size: 10px;
+    }
+
+    .hp {
+      background: #dc2626;
+    }
+
+    .mp {
+      background: #2563eb;
+    }
+
+    .atk {
+      background: #111;
+    }
+
+    .def {
+      background: #16a34a;
+    }
+    /* ===== 技能樹 ===== */
+    .skill-tree {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill {
+      position: relative;
+      width: 100px;
+      height: 65px;
+      text-align: center;
+      border: 3px solid #ffd700;
+      padding: 10px;
+      margin-bottom: 50px;
+      background: #111;
+      font-size: 10px;
+    }
+
+    .skill.java::before {
+      content: "";
+      position: absolute;
+      top: -90px; /* 向上延伸的高度 */
+      left: 50%; /* 從中間開始 */
+      width: 95px; /* 向右延伸的長度，對齊 Python */
+      height: 85px; /* 垂直高度 */
+      border-top: 4px solid #facc15; /* 橫向線 */
+      border-left: 4px solid #facc15; /* 縱向線 */
+      pointer-events: none;
+    }
+
+    .skill.python {
+      position: absolute;
+      top: -135px;
+      left: 160px;
+      border-color: #facc15;
+    }
+
+    .backend {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .frontend {
+      display: flex;
+      align-items: center;
+    }
+
+    .skill img {
+      width: 40px;
       margin-bottom: 10px;
     }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-  .skills span {
-  display: inline-block;
-  background: #eef2ff;
-  color: #3730a3;
-  padding: 6px 14px;
-  margin: 6px 6px 0 0;
-  border-radius: 999px;
-  font-size: 14px;
-}
-    header {
-  text-align: center;
-  margin-bottom: 30px;
-}
 
-header h1 {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
+    .skill.locked {
+      opacity: 0.4;
+      filter: grayscale(100%);
+    }
 
-header p {
-  font-size: 18px;
-  color: #555;
-}
+    /* 連線 */
+    .link {
+      width: 40px;
+      height: 4px;
+      margin-bottom: 40px;
+      background: #ffd700;
+    }
+
+    .link.locked {
+      background: #555;
+    }
+
+    /* Tooltip */
+    .skill::after {
+      content: attr(data-desc);
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      border: 2px solid #ffd700;
+      padding: 6px 8px;
+      font-size: 9px;
+      color: #ffd700;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 10;
+    }
+
+    .skill:hover::after {
+      opacity: 1;
+    }
+
+    .skill:hover {
+      box-shadow: 0 0 10px #ffd700;
+      transform: translateY(-2px);
+    }
+
+    /* ===== 關卡 ===== */
+    .stage {
+      border: 3px dashed #4ade80;
+      padding: 12px;
+      margin-bottom: 14px;
+      background: #0f172a;
+      font-size: 10px;
+    }
   </style>
-</head>
-<body>
-
-  <div class="container">
-
-    <!-- About -->
-    <section>
-      <h1> 葉權緯 </h1>
-      <p>
-        專注於後端開發的工程師，主要使用 Java / Spring Boot，
-        目前持續學習前後端分離架構與 Vue。
-      </p>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-  <span>Java</span>
-  <span>Spring Boot</span>
-  <span>RESTful API Design</span>
-  <span>JPA / Hibernate</span>
-  <span>SQL (CRUD)</span>
-  <span>Vue 3 </span>
-  <span>Git / GitHub</span>
-</div>
-
-    </section>
-
-    <!-- Projects -->
-    <section>
-      <h2> 作品 </h2>
-      <ul>
-        <li>
-          <strong>使用者管理系統（Spring Boot）</strong><br />
-          實作 CRUD、分層架構（Controller / Service / Repository），
-          並使用 H2 / MySQL 進行資料存取。
-        </li>
-        <li>
-          <strong>前後端分離登入系統</strong><br />
-          使用 Spring Boot 提供 API，前端以 Vue 撰寫，
-          並透過 Axios 進行資料串接。
-        </li>
-      </ul>
-    </section>
-
-    <!-- Learning -->
-    <section>
-      <h2>Learning & Experience</h2>
-      <ul>
-        <li>Spring Boot 核心觀念：DI / IoC / MVC</li>
-        <li>API 測試：Postman</li>
-        <li>基本系統測試與報表產出（QA 經驗）</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h2>Contact</h2>
-      <p>
-        GitHub：
-        <a href="https://github.com/suika7150" target="_blank">
-          https://github.com/suika7150
-        </a>
-      </p>
-    </section>
-
-  </div>
-
-</body>
 </html>

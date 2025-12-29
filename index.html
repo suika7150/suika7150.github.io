@@ -16,12 +16,13 @@
 
   <body>
     <div class="container">
-      <!-- ❤️ 角色狀態 -->
+      <!-- 角色狀態 -->
       <section id="status">
         <div class="profile-header">
           <div class="avatar">
             <img src="cat.jpg" alt="Lucas" />
           </div>
+
           <div class="status-container">
             <h1>🧙‍♂️ Lucas</h1>
             <p>職業：Backend Engineer</p>
@@ -34,10 +35,37 @@
               <div class="def">🛡️ DEF：MySQL</div>
             </div>
           </div>
+          <!-- 能力值 -->
+          <div class="stats-radar">
+            <svg viewBox="-40 -40 270 270">
+              <!-- 外框 -->
+              <polygon
+                points="100,10 190,75 155,180 45,180 10,75"
+                fill="none"
+                stroke="#ffd700"
+                stroke-width="3"
+              />
+
+              <!-- 能力值 -->
+              <polygon
+                points="100,20 170,80 125,135 60,160 35,85"
+                fill="rgba(250, 204, 21, 0.4)"
+                stroke="#facc15"
+                stroke-width="2"
+              />
+
+              <!-- 標籤 -->
+              <text x="100" y="0" text-anchor="middle">CORE LOGIC</text>
+              <text x="230" y="50" text-anchor="end">INTERFACE</text>
+              <text x="160" y="200" text-anchor="middle">DEPLOY</text>
+              <text x="40" y="200" text-anchor="middle">CLIENT</text>
+              <text x="-35" y="80" text-anchor="start">DATA</text>
+            </svg>
+          </div>
         </div>
       </section>
 
-      <!-- 🌳 技能樹 -->
+      <!-- 技能樹 -->
       <section id="skills">
         <h2>🌳 Skill Tree</h2>
 
@@ -117,7 +145,7 @@
         </div>
       </section>
 
-      <!-- 🗺️ 關卡列表 -->
+      <!-- 關卡列表 -->
       <section id="stages">
         <h2>🗺️ Stages Cleared</h2>
 
@@ -150,17 +178,34 @@
         </div>
       </section>
 
-      <!-- 📜 Quest Log -->
+      <!-- Quest Log -->
       <section id="projects">
         <h2>📜 Quest Log</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <div class="project-card">
+          <h3>[Quest] 智慧商城系統</h3>
+          <p class="tech-stack">Main Loot: Java / Spring Boot / MySQL</p>
+          <p>✔ 實現前後端分離架構</p>
+          <p>✔ 串接第三方支付 API</p>
+          <div class="project-link">
+            <a href="https://github.com/..." target="_blank"
+              >▶ 查看原始碼 (Source Code)</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>[Quest] 個人即時通訊工具</h3>
+          <p class="tech-stack">Main Loot: WebSocket / Vue 3</p>
+          <p>✔ 處理高並發連線</p>
+          <div class="project-link">
+            <a href="https://github.com/..." target="_blank"
+              >▶ 進入傳送門 (Demo Link)</a
+            >
+          </div>
+        </div>
       </section>
 
-      <!-- 📚 Learning -->
+      <!-- Learning -->
       <section id="learning">
         <h2>Learning & Experience</h2>
         <ul>
@@ -170,7 +215,7 @@
         </ul>
       </section>
 
-      <!-- 📬 Contact -->
+      <!-- Contact -->
       <section id="contact">
         <h2>Contact</h2>
         <p>
@@ -222,17 +267,6 @@
       color: #000;
       border-color: #fff;
       transform: translateX(5px); /* 點擊感 */
-    }
-
-    /* 響應式：手機版隱藏或調整位置 */
-    @media (max-width: 1100px) {
-      .sidebar {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        transform: none;
-        margin-bottom: 20px;
-      }
     }
 
     body {
@@ -344,6 +378,29 @@
     .def {
       background: #16a34a;
     }
+
+    .stats-radar {
+      width: 260px;
+      height: 260px;
+      /* background: #111; */
+      border: none;
+      /* box-shadow: 6px 6px 0 #000; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stats-radar svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .stats-radar text {
+      fill: #ffd700;
+      font-size: 8px;
+      font-family: "Press Start 2P", monospace;
+    }
+
     /* ===== 技能樹 ===== */
     .skill-tree {
       display: flex;
@@ -450,6 +507,39 @@
       margin-bottom: 14px;
       background: #0f172a;
       font-size: 10px;
+    }
+
+    .project-card {
+      border: 3px double #ffd700; /* 雙線框，看起來更像卷軸或古書 */
+      padding: 15px;
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .tech-stack {
+      color: #facc15;
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project-link a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #334155;
+      padding: 5px 10px;
+      border: 1px solid #4ade80;
+      color: #4ade80;
+    }
+
+    /* 響應式：手機版隱藏或調整位置 */
+    @media (max-width: 1100px) {
+      .sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </html>

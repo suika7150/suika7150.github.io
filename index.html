@@ -231,12 +231,10 @@
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-    /* 讓網頁捲動變得平滑 */
     html {
       scroll-behavior: smooth;
     }
 
-    /* 側邊欄樣式 */
     .sidebar {
       position: fixed;
       left: 50px;
@@ -261,12 +259,11 @@
       width: 60px;
     }
 
-    /* 滑鼠懸停效果 */
     .sidebar a:hover {
       background: #ffd700;
       color: #000;
       border-color: #fff;
-      transform: translateX(5px); /* 點擊感 */
+      transform: translateX(5px);
     }
 
     body {
@@ -323,7 +320,7 @@
       text-decoration: underline;
     }
 
-    /* ===== 角色狀態 ===== */
+    /*  角色狀態  */
     .profile-header {
       display: flex;
       align-items: center;
@@ -401,7 +398,7 @@
       font-family: "Press Start 2P", monospace;
     }
 
-    /* ===== 技能樹 ===== */
+    /*  技能樹  */
     .skill-tree {
       display: flex;
       flex-direction: column;
@@ -422,12 +419,12 @@
     .skill.java::before {
       content: "";
       position: absolute;
-      top: -90px; /* 向上延伸的高度 */
-      left: 50%; /* 從中間開始 */
-      width: 95px; /* 向右延伸的長度，對齊 Python */
-      height: 85px; /* 垂直高度 */
-      border-top: 4px solid #facc15; /* 橫向線 */
-      border-left: 4px solid #facc15; /* 縱向線 */
+      top: -90px;
+      left: 50%;
+      width: 95px;
+      height: 85px;
+      border-top: 4px solid #facc15;
+      border-left: 4px solid #facc15;
       pointer-events: none;
     }
 
@@ -500,7 +497,7 @@
       transform: translateY(-2px);
     }
 
-    /* ===== 關卡 ===== */
+    /*  關卡  */
     .stage {
       border: 3px dashed #4ade80;
       padding: 12px;
@@ -531,7 +528,6 @@
       color: #4ade80;
     }
 
-    /* 響應式：手機版隱藏或調整位置 */
     @media (max-width: 1100px) {
       .sidebar {
         position: static;

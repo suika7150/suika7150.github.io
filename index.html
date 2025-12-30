@@ -5,16 +5,16 @@
     <title>Lucas | Backend Engineer</title>
   </head>
 
-  <nav class="sidebar">
-    <a href="#status">STATUS</a>
-    <a href="#skills">SKILL</a>
-    <a href="#stages">STAGE</a>
-    <a href="#projects">Quest Log</a>
-    <a href="#learning">EXP</a>
-    <a href="#contact">MSG</a>
-  </nav>
-
   <body>
+    <nav class="sidebar">
+      <a href="#status">STATUS</a>
+      <a href="#skills">SKILL</a>
+      <a href="#stages">STAGE</a>
+      <a href="#projects">Quest Log</a>
+      <!-- <a href="#learning">EXP</a> -->
+      <a href="#contact">MSG</a>
+    </nav>
+
     <div class="container">
       <!-- 角色狀態 -->
       <section id="status">
@@ -67,7 +67,9 @@
 
       <!-- 技能樹 -->
       <section id="skills">
-        <h2>🌳 Skill Tree</h2>
+        <div>
+          <h2>🌳 Skill Tree</h2>
+        </div>
 
         <div class="skill-tree">
           <div class="backend">
@@ -111,6 +113,11 @@
               />
               <span>Python</span>
             </div>
+            <div class="wizard-animation">
+              <div class="magic-circle"></div>
+              <img src="wizard.gif" alt="Wizard Casting" />
+              <div class="casting-text">CASTING JAVA...</div>
+            </div>
           </div>
 
           <div class="frontend">
@@ -149,22 +156,36 @@
       <section id="stages">
         <h2>🗺️ Stages Cleared</h2>
 
+        <div class="project-card">
+          <h3>[Job] QA / Testing</h3>
+          <p class="tech-stack">Tools: Postman / LoadRunner</p>
+          <p class="tech-stack">Purpose: 系統測試 & 報表撰寫、維護</p>
+          <ul>
+            <li>單一功能測試</li>
+            <li>整合測試</li>
+            <li>使用 Postman 測試 API</li>
+            <li>撰寫測試報告</li>
+            <li>協助主管產出報表</li>
+          </ul>
+          <p>🎁 獎勵：QA 熟練度 +1</p>
+        </div>
+
         <div class="stage">
-          <h3>Stage 1：Java 程式設計</h3>
+          <h3>Stage 1：Java 程式設計 <small>(巨匠電腦課程)</small></h3>
           <p>✔ Java核心語法</p>
           <p>✔ OOP</p>
           <p>🎁 獎勵：Java 熟練度 +1</p>
         </div>
 
         <div class="stage">
-          <h3>Stage 2：Java Web 程式開發</h3>
+          <h3>Stage 2：Java Web 程式開發 <small>(巨匠電腦課程)</small></h3>
           <p>✔ JavaScript</p>
           <p>✔ Servlet / JSP / MVC</p>
           <p>🎁 獎勵：JavaScript 熟練度 +1</p>
         </div>
 
         <div class="stage">
-          <h3>Stage 3：Java 企業框架實務班</h3>
+          <h3>Stage 3：Java 企業框架實務班 <small>(巨匠電腦課程)</small></h3>
           <p>✔ Spring Boot</p>
           <p>✔ DI / IOC / AOP</p>
           <p>✔ Spring MVC / JPA / JDBC / MyBatis</p>
@@ -172,7 +193,7 @@
         </div>
 
         <div class="stage">
-          <h3>Stage 4：Java 企業培訓班</h3>
+          <h3>Stage 4：Java 企業培訓班 <small>(巨匠電腦課程)</small></h3>
           <p>✔ Vue3 / 前後端分離</p>
           <p>🎁 獎勵：Vue 熟練度 +1</p>
         </div>
@@ -182,37 +203,33 @@
       <section id="projects">
         <h2>📜 Quest Log</h2>
         <div class="project-card">
-          <h3>[Quest] 智慧商城系統</h3>
-          <p class="tech-stack">Main Loot: Java / Spring Boot / MySQL</p>
-          <p>✔ 實現前後端分離架構</p>
-          <p>✔ 串接第三方支付 API</p>
+          <h3>[Side Quest] 購物商城</h3>
+          <p class="tech-stack">
+            Main Loot: Spring Boot / Vue / MySQL / RESTful API / JWT
+          </p>
+          <p class="tech-stack">Purpose: 練習前後端分離 & API設計</p>
+          <ul>
+            <li>Spring Boot 建立 RESTful API</li>
+            <li>Vue 3 + Axios 串接後端服務</li>
+            <li>商品與訂單基本 CRUD 流程</li>
+            <li>實作 JWT 登入驗證機制</li>
+            <li>使用 Vue Router 管理頁面路由</li>
+          </ul>
           <div class="project-link">
-            <a href="https://github.com/..." target="_blank"
-              >▶ 查看原始碼 (Source Code)</a
+            <a
+              href="https://github.com/suika7150/ECS/tree/dev_Lucas"
+              target="_blank"
+              >▶ 進入傳送門 (Spring Boot)</a
+            >
+          </div>
+          <div class="project-link">
+            <a
+              href="https://github.com/suika7150/Vue3_Topic_Example/tree/dev_Lucas"
+              target="_blank"
+              >▶ 進入傳送門 (Vue)</a
             >
           </div>
         </div>
-
-        <div class="project-card">
-          <h3>[Quest] 個人即時通訊工具</h3>
-          <p class="tech-stack">Main Loot: WebSocket / Vue 3</p>
-          <p>✔ 處理高並發連線</p>
-          <div class="project-link">
-            <a href="https://github.com/..." target="_blank"
-              >▶ 進入傳送門 (Demo Link)</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Learning -->
-      <section id="learning">
-        <h2>Learning & Experience</h2>
-        <ul>
-          <li>Spring Boot：DI / IoC / MVC</li>
-          <li>API 測試：Postman</li>
-          <li>基本系統測試與 QA 經驗</li>
-        </ul>
       </section>
 
       <!-- Contact -->
@@ -226,6 +243,12 @@
         </p>
       </section>
     </div>
+
+    <!-- <script>
+      window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+      });
+    </script> -->
   </body>
 
   <style>
@@ -349,7 +372,6 @@
     .status-container {
       margin-left: 0;
       flex-grow: 1;
-      /* margin-left: 500px; */
     }
 
     .status div {
@@ -379,9 +401,7 @@
     .stats-radar {
       width: 260px;
       height: 260px;
-      /* background: #111; */
       border: none;
-      /* box-shadow: 6px 6px 0 #000; */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -398,10 +418,76 @@
       font-family: "Press Start 2P", monospace;
     }
 
-    /*  技能樹  */
+    /* .skill-tree-header {
+      display: block;
+    } */
+
+    #skills {
+      display: block;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
     .skill-tree {
+      flex: 1;
+    }
+
+    /* 法師動畫區域 */
+    .wizard-animation {
+      width: 200px;
+      height: 200px;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 50px;
+      background: rgba(0, 0, 0, 0.2);
+      /* border: 2px dashed #4ade80; */
+      overflow: hidden;
+      margin-left: 50px;
+    }
+
+    .wizard-animation img {
+      width: 150px;
+      image-rendering: pixelated;
+      z-index: 2;
+    }
+
+    /* 魔法陣旋轉特效 */
+    .magic-circle {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 4px dotted #ffd700;
+      border-radius: 50%;
+      animation: rotateCircle 10s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes rotateCircle {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 詠唱文字閃爍 */
+    .casting-text {
+      margin-top: 20px;
+      /* color: #4ade80; */
+      font-size: 10px;
+      animation: blink 1s steps(2) infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     .skill {
@@ -439,7 +525,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin-top: 150px;
+      margin-top: 180px;
     }
 
     .frontend {
@@ -503,7 +589,6 @@
       padding: 12px;
       margin-bottom: 14px;
       background: #0f172a;
-      font-size: 10px;
     }
 
     .project-card {
@@ -515,7 +600,7 @@
 
     .tech-stack {
       color: #facc15;
-      font-size: 10px;
+      font-size: 12px;
       margin-bottom: 10px;
     }
 

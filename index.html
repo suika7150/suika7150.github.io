@@ -20,7 +20,7 @@
       <section id="status">
         <div class="profile-header">
           <div class="avatar">
-            <img src="cat.jpg" alt="Lucas" />
+            <img src="Lucas.jpg" alt="Lucas" />
           </div>
 
           <div class="status-container">
@@ -113,10 +113,13 @@
               />
               <span>Python</span>
             </div>
+
+            <div class="casting-text">CASTING JAVA...</div>
+
+            <!-- wizard  -->
             <div class="wizard-animation">
               <div class="magic-circle"></div>
-              <img src="wizard.gif" alt="Wizard Casting" />
-              <div class="casting-text">CASTING JAVA...</div>
+              <img src="wizard-64-1.png" alt="Wizard Casting" />
             </div>
           </div>
 
@@ -165,7 +168,7 @@
             <li>整合測試</li>
             <li>使用 Postman 測試 API</li>
             <li>撰寫測試報告</li>
-            <li>協助主管產出報表</li>
+            <li>主管交辦事項</li>
           </ul>
           <p>🎁 獎勵：QA 熟練度 +1</p>
         </div>
@@ -244,11 +247,24 @@
       </section>
     </div>
 
-    <!-- <script>
-      window.addEventListener("load", () => {
-        window.scrollTo(0, 0);
+    <script>
+      const wizardImg = document.querySelector(".wizard-animation img");
+      const skills = document.querySelectorAll(".skill");
+
+      const idle = "wizard-64-1.png";
+      const gif = "wizard-64-2.gif";
+
+      skills.forEach((skill) => {
+        skill.addEventListener("mouseenter", () => {
+          wizardImg.src = "";
+          wizardImg.src = gif;
+        });
+
+        skill.addEventListener("mouseleave", () => {
+          wizardImg.src = idle;
+        });
       });
-    </script> -->
+    </script>
   </body>
 
   <style>
@@ -352,21 +368,22 @@
     }
 
     .avatar {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       margin-left: 20px;
       border-radius: 50%;
       border: 4px solid #ffd700;
       overflow: hidden;
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-      background: #111;
+      background: #fff;
       flex-shrink: 0;
     }
 
     .avatar img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: 50% 30%;
     }
 
     .status-container {
@@ -418,10 +435,6 @@
       font-family: "Press Start 2P", monospace;
     }
 
-    /* .skill-tree-header {
-      display: block;
-    } */
-
     #skills {
       display: block;
       justify-content: space-between;
@@ -434,34 +447,43 @@
 
     /* 法師動畫區域 */
     .wizard-animation {
-      width: 200px;
-      height: 200px;
+      position: relative;
+      width: 220px;
+      height: 220px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      top: 50px;
-      background: rgba(0, 0, 0, 0.2);
+      top: -20px;
+      /* background: rgba(0, 0, 0, 0.2); */
       /* border: 2px dashed #4ade80; */
       overflow: hidden;
       margin-left: 50px;
     }
 
     .wizard-animation img {
-      width: 150px;
+      width: 230px;
       image-rendering: pixelated;
       z-index: 2;
     }
 
+    .wizard-animation .casting-text {
+      opacity: 0;
+    }
+
+    .wizard-animation:hover .casting-text {
+      opacity: 1;
+    }
+
     /* 魔法陣旋轉特效 */
     .magic-circle {
-      position: absolute;
+      /* position: absolute;
       width: 200px;
       height: 200px;
       border: 4px dotted #ffd700;
       border-radius: 50%;
       animation: rotateCircle 10s linear infinite;
-      opacity: 0.3;
+      opacity: 0.3; */
     }
 
     @keyframes rotateCircle {
@@ -475,8 +497,10 @@
 
     /* 詠唱文字閃爍 */
     .casting-text {
-      margin-top: 20px;
-      /* color: #4ade80; */
+      position: absolute;
+      top: -20px;
+      left: 73%;
+      color: #4ade80;
       font-size: 10px;
       animation: blink 1s steps(2) infinite;
     }
@@ -516,7 +540,7 @@
 
     .skill.python {
       position: absolute;
-      top: -135px;
+      top: -95px;
       left: 160px;
       border-color: #facc15;
     }
